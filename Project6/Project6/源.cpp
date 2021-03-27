@@ -1,24 +1,18 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-	int i,j;
-	int count = 0;
-	for (i = 100; i <= 200; i++)
+	int i;
+	for (i = 1; i <= 100; i++)
 	{
-		for (j = 2; j <= sqrt(i); j++)
+		if ((i % 10)== 9)
 		{
-			if (i % j == 0)
-			{
-				break;
-			}
+			printf("%d\n", i);
+			continue;
 		}
-		if (j > sqrt(i))
+		if ((i / 10) == 9)
 		{
-			printf("%d  ", i);
-			count++;
+			printf("%d\n", i);
 		}
 	}
-	printf("\n%d", count);
 	return 0;
 }

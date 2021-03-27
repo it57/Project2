@@ -1,21 +1,24 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-	int t = 8;
-	int i;
-	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-	int p = sizeof(arr) / sizeof(arr[0]);
-	for (i = 0; i < p; i++)
+	int i,j;
+	int count = 0;
+	for (i = 100; i <= 200; i++)
 	{
-		if (t == arr[i])
+		for (j = 2; j <= sqrt(i); j++)
 		{
-			printf("找到了:%d\n", i);
-			break;
+			if (i % j == 0)
+			{
+				break;
+			}
+		}
+		if (j > sqrt(i))
+		{
+			printf("%d  ", i);
+			count++;
 		}
 	}
-	if (i == p)
-	{
-		printf("找不到,%d\n",i);
-	}
+	printf("\n%d", count);
 	return 0;
 }

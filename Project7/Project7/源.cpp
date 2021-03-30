@@ -1,14 +1,16 @@
 #include<stdio.h>
 int main()
 {
-	int i=1;
-	double t = 0.0;
-	//for (i = 1; i <= 100; i++)
-	while(i<=100)
+	int i, j;
+	int c = 1;
+	for (i = 1; i <= 9; i++)
 	{
-		t += 1.0 / i;
-		i++;
+		for (j = 1; j <= i; j++)
+		{
+			c = i * j;
+			printf("%d*%d=%d ", i, j, c);
+		}
+		printf("\n");
 	}
-	printf("%lf\n", t);
 	return 0;
 }

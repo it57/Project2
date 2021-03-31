@@ -1,21 +1,17 @@
 #include<stdio.h>
-int peng(int x, int y)
+void change(int* x, int* y)
 {
-	int max = 0;
-	if (x > y)
-	{
-		max = x;
-	}
-	else
-		max = y;
-	return max;
+	int t = 0;
+	t =*x;
+	*x =*y;
+	*y = t;
+	//return x,y;
 }
 int main()
 {
-	int i,z;
-	int t = 0;
-	scanf_s("%d%d", &i, &z);
-	t=peng(i,z);
-	printf("%d\n", t);
+	int a, b;
+	scanf_s("%d%d",&a,&b);
+	change(&a,&b);
+	printf("%d,%d", a, b);
 	return 0;
 }

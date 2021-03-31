@@ -1,10 +1,9 @@
 #include<stdio.h>
-#include<string.h>
+#include<memory.h>
 int main()
 {
-	char arr1[] = { "xiao ke ai" };
-	char arr2[] = { "shi wo" };
-	strcpy_s(arr1, arr2);
-	printf("%s", arr1);
+	char arr[] = "woaini";
+	memset(arr, '@', 4);
+	printf("%s", arr);
 	return 0;
 }

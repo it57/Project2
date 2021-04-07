@@ -1,18 +1,21 @@
 #include<stdio.h>
 int main()
 {
-	int arr[10];
+	int mid;
 	int i;
-	int sum = 0;
+	int sb[10];
 	for (i = 0; i < 10; i++)
 	{
-		scanf_s("%d", &arr[i]);
+		scanf_s("%d", &sb[i]);
 	}
-	for (i = 9; i>= 0; i--)
+	for (i =0; i <=9; i++)
 	{
-		printf("%d\t", arr[i]);
-		sum += arr[i];
+		mid = sb[0];
+		if (mid < sb[i])
+		{
+			mid = sb[i];
+		}
 	}
-	printf("%d\n", sum);
+	printf("%d,%d\n", mid, sb[mid]);
 	return 0;
 }

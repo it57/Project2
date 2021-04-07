@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	int mid;
+	int mid=0;
 	int i;
 	int sb[10];
 	for (i = 0; i < 10; i++)
@@ -10,10 +10,9 @@ int main()
 	}
 	for (i =0; i <=9; i++)
 	{
-		mid = sb[0];
-		if (mid < sb[i])
+		if (sb[mid] < sb[i])
 		{
-			mid = sb[i];
+			mid = i;
 		}
 	}
 	printf("%d,%d\n", mid, sb[mid]);

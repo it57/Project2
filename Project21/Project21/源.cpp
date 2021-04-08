@@ -1,20 +1,27 @@
 #include<stdio.h>
 int main()
 {
-	int mid=0;
+	int sum = 0;
+	float ave = 1.0;
 	int i;
-	int sb[10];
-	for (i = 0; i < 10; i++)
+	int k[5];
+	float t = sizeof(k) / sizeof(k[0]);
+	for (i = 0; i < 5; i++)
 	{
-		scanf_s("%d", &sb[i]);
+		scanf_s("%d", &k[i]);
 	}
-	for (i =0; i <=9; i++)
+	for (i = 0; i < 5; i++)
 	{
-		if (sb[mid] < sb[i])
+		sum += k[i];
+	}
+	ave = sum / t;
+	for (i = 0; i < 5; i++)
+	{
+		if (k[i] > ave)
 		{
-			mid = i;
+			printf("%d\n", k[i]);
 		}
 	}
-	printf("%d,%d\n", mid, sb[mid]);
+	printf("%.3f\n", ave);
 	return 0;
 }
